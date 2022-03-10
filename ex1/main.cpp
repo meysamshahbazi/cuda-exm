@@ -19,7 +19,7 @@ int main(int argc, const char** argv)
     int64 t1 = cv::getTickCount();
     src.upload(img);
     
-    for (int i = 0; i <10000;i++){
+    for (int i = 0; i <2;i++){
         cv::cuda::cvtColor(src,dst,cv::COLOR_BGR2HSV);
         cv::cuda::cvtColor(dst,src,cv::COLOR_HSV2BGR);
     }
@@ -37,7 +37,7 @@ int main(int argc, const char** argv)
     img = cv::imread(argv[1]);
     cv::Mat img2;
     t1 = cv::getTickCount();
-    for (int i = 0; i <10000;i++){
+    for (int i = 0; i <2;i++){
         cv::cvtColor(img,img2,cv::COLOR_BGR2HSV);
         cv::cvtColor(img2,img,cv::COLOR_HSV2BGR);
     }
