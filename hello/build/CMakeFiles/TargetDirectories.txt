@@ -1,0 +1,3 @@
+/home/meysam/test-apps/cuda-exm/hello/build/CMakeFiles/rebuild_cache.dir
+/home/meysam/test-apps/cuda-exm/hello/build/CMakeFiles/edit_cache.dir
+/home/meysam/test-apps/cuda-exm/hello/build/CMakeFiles/hello.dir
