@@ -5,9 +5,10 @@
 #include <stdio.h>
 
 
-__global__ void hello_cuda()
+__global__ void hello_cuda(int i)
 {
-    printf("HEL HEL\n");
+    i++;
+    printf("HEL HEL %d\n",i);
 }
 
 int main()
@@ -19,13 +20,14 @@ int main()
     dim3 grid(nx/block.x, ny/block.y);
 
     // 
+    int i =0;
 
-    hello_cuda<< <grid,block >> > ();
+    hello_cuda<< <grid,block >> > (1);
 
 
     cudaDeviceSynchronize();
     cudaDeviceReset();
-
-
+     
     return 0;
 }
+ 
